@@ -30,7 +30,8 @@
 		$record->bindparam(4,$_POST['tipodoc']);
 		$record->bindparam(5,$_POST['documento']);
 		$record->bindparam(6,$_POST['user']);
-		$record->bindparam(7,$_POST['pass']);
+		$pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);
+		$record->bindparam(7,$pass);
 
 		if ($record->execute()) {
 			echo "Datos registrados";
