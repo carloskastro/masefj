@@ -21,6 +21,7 @@
 <body class="bg-login">
 	<?php
 	require_once 'conn.php';
+	$msg=null;
 
 	if (isset($_POST['reg'])) {
 		$record=$conn->prepare('INSERT INTO aprendiz(nombre,apellido,email,tipodoc,documento,user,pass) VALUES(?,?,?,?,?,?,?)');
@@ -34,15 +35,26 @@
 		$record->bindparam(7,$pass);
 
 		if ($record->execute()) {
-			echo "Datos registrados";
+			$msg="Datos registrados";
+			$color="success";
 		}else{
-			echo "Revise los datos";
+			$msg="Datos no registrados, revise la información";
+			$color="danger";
 		}
 	}
 
 	?>
 	<div class="container">
 		<div class="pt-5 text-center">
+			<?php 
+			if ($msg!='' && $color!='') { ?>
+			
+			<div class="alert alert-<?php echo $color; ?> alert-dismissible" style="border-radius:2.25rem;">
+				<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+				<strong>Success!</strong> <?php echo $msg; ?>.
+			</div>
+
+			<?php }	?>
 			<div class="card" style="border-radius: 2.25rem;background-color: #ffffffdb;">
 				<div class="card-body">
 					<form action="" method="post" enctype="application/x-www-form-urlencoded">
