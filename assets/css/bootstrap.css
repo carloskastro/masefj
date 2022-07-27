@@ -11264,30 +11264,28 @@ textarea.form-control-lg {
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
-
 /*Flecha para hacer la pagina hacia arriba*/
 .ir-arriba{
   display:none;
   background-repeat:no-repeat;
   font-size:20px;
-  color:black;
+  color: #212529;
   cursor:pointer;
   position:fixed;
   bottom:10px;
   right:10px;
   z-index:2;
 }
-
-/*Clase para Background*/
+/*Estilo del fondo*/
 .bg-login{
   background-image: url('../img/bg_login.jpg');
+  /*<a href='https://www.freepik.es/vectores/persona-pc'>Vector de persona pc creado por studiogstock - www.freepik.es</a>*/
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #000000;
+  background-color: black;
 }
-
 .login{
   width: 300px;
   border-radius: 4px;
@@ -11296,4 +11294,9 @@ textarea.form-control-lg {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+.logo{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
