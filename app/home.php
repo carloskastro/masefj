@@ -50,7 +50,7 @@
 
 						<ul class="nav navbar-nav me-auto" role="tablist">
 							<li class="nav-item">
-								<a class="nav-link active" data-bs-toggle="tab" href="#home">Inicio</a>
+								<a class="nav-link active" href="home.php">Inicio</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" data-bs-toggle="tab" href="#ficha">Ficha</a>
@@ -60,6 +60,9 @@
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" data-bs-toggle="tab" href="#tratamiento">Tratamiento</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="tabla.php">Tabla</a>
 							</li>
 						</ul>
 
